@@ -1,0 +1,46 @@
+returned mailbox id different but I don't think it matters otherwise pass
+having issues with libmjdphase1.a using liblxuphase1.a for now
+
+test0 status - passed
+test1 status - passed
+test2 status - passed
+test3 status - passed
+test4 status - passed
+test5 status - passed
+test6 status - passed
+test7 status - passed
+test8 status - passed
+test9 status - passed
+test10 status - passed
+test11 status - passed
+test12 status - passed
+test13 status - implement waitdevice - should be fixed
+test14 status - implement waitdevice - should be fixed
+test15 status - passed
+test16 status - passed
+test17 status - passed
+test18 status - passed
+test19 status - deadlock bug 
+test20 status - passed
+test21 status - passed
+test22 status - passed
+test23 status - passed
+test24 status - passed
+test25 status - passed
+test26 status - passed
+test27 status - passed
+test28 status - passed
+test29 status - passed
+test30 status - passed
+test31 status - passed
+test32 status - passed
+test33 status - passed
+test34 status - passed
+test35 status - passed
+test36 status - start2(): calling usyscall executing syscall 0, this should halt SIMULATOR TRAP: USLOSS_IntVec[USLOSS_SYSCALL_INT] is NULL!
+test37 status - start2(): calling usyscall executing syscall 0, this should halt SIMULATOR TRAP: USLOSS_IntVec[USLOSS_SYSCALL_INT] is NULL!
+test38 status - start2(): calling usyscall executing syscall 0, this should halt SIMULATOR TRAP: USLOSS_IntVec[USLOSS_SYSCALL_INT] is NULL!
+test39 status - passed
+test40 status - passed
+test41 status - passed
+test42 status - passed

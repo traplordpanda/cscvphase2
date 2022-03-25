@@ -1,4 +1,4 @@
-#define DEBUG2 1
+#define DEBUG2 0
 
 #define EMPTY  0
 #define USED   1
@@ -21,7 +21,7 @@ struct mbox_proc {
 	short		 pid;
 	int          status;
 	void        *msg;
-	int          msg_Size;
+	int          msg_size;
 	int			 mbox_Released;
 	mbox_proc_ptr next_Block_Send;
 	mbox_proc_ptr next_Block_Receive;
@@ -31,12 +31,12 @@ struct mbox_proc {
 struct mailbox {
 	int			 mbox_id;
 	int			 status;
-	int			 num_Slots;
-	int			 num_Slots_Used;
-	int          slot_Size;
-	mbox_proc_ptr block_Send_List;
-	mbox_proc_ptr block_Receive_List;
-	slot_ptr     slot_List;
+	int			 total_slots;
+	int			 total_slots_used;
+	int          slot_size;
+	mbox_proc_ptr block_slist;
+	mbox_proc_ptr block_rlist;
+	slot_ptr     slot_list;
       /* other items as needed... */
 };
 
@@ -45,8 +45,8 @@ struct mail_slot {
 	int		     mbox_id;
 	int          status;
 	char         msg[MAX_MESSAGE];
-	int          msg_Size;
-	slot_ptr     next_Slot;
+	int          msg_size;
+	slot_ptr     nslot;
    /* other items as needed... */
 
 };
