@@ -7,7 +7,12 @@
             "type": "shell",
             "args": ["-f", "${workspaceFolder}/Makefile", "${fileBasenameNoExtension}"],
             "presentation": {
-                "reveal": "always"
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
             },
             "group": "build"
         }
