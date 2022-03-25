@@ -369,7 +369,7 @@ int MboxReceive(int mbox_id, void * msg_ptr, int max_msg_size) {
         return is_zapped() ? -3 : msgSize;
     }
 } /* MboxReceive */
-
+   
 /* ------------------------------------------------------------------------
 Releases a previously created mailbox. Any process waiting on the mailbox should be zap’d. 
 Note, however, that zap’ing does not work in every case. It would work for a high priority 
@@ -395,7 +395,7 @@ int MboxRelease(int mbox_id) {
 
     // verify creation
     if (MailBoxTable[mbox_id].status == EMPTY) {
-        enableInterrupts();
+        enableInterrupts();  
         return -1;
     }
 
@@ -598,9 +598,7 @@ int waitdevice(int type, int unit, int * status) {
 
     /* Check if an existing type is being used */
     if ((type != DISK_DEV) && (type != CLOCK_DEV) && (type != TERM_DEV)) {
-        if (DEBUG2 && debugflag2) {
-            console("waitdevice(): incorrect type. Halting..\n");
-        }
+        debugOut("waitdevice(): incorrect type. Halting..\n");
         halt(1);
     }
 
